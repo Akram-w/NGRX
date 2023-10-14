@@ -3,5 +3,8 @@ export interface Book {
     volumeInfo: {
         title: string;
         authors: Array<string>;
+        imageLinks: {
+            thumbnail: string;
+        }
     }
 }

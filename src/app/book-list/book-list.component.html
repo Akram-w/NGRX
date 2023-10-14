@@ -2,6 +2,7 @@
   class="book-item"
   *ngFor="let book of books"
 >
+  <img src={{book.volumeInfo.imageLinks.thumbnail}}/>
   <p>{{book.volumeInfo.title}}</p><span> by {{book.volumeInfo.authors}}</span>
   <button
     (click)="add.emit(book.id)"

@@ -8,6 +8,8 @@ import { collectionReducer } from './state/collection.reducer';
 import { HttpClientModule } from '@angular/common/http';
 import { BookListComponent } from './book-list/book-list.component';
 import { BookCollectionComponent } from './book-collection/book-collection.component';
+import { BooksEffects } from './state/books.effects';
+import { EffectsModule } from '@ngrx/effects';
 
 @NgModule({
   declarations: [
@@ -18,6 +20,7 @@ import { BookCollectionComponent } from './book-collection/book-collection.compo
   imports: [
     BrowserModule,
     StoreModule.forRoot({books: booksReducer, collection: collectionReducer}),
+    EffectsModule.forRoot([BooksEffects]),
     HttpClientModule
   ],
   providers: [],
