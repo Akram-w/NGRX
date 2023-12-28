@@ -1,7 +1,8 @@
 .book-list {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: flex-start;
+    column-gap: 4.5vw;
     margin: -10px; /* To counteract the padding on individual cards */
   }
   
